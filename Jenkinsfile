@@ -1,8 +1,12 @@
 #!/usr/bin/env groovy
 
-node {
+pipeline {
 
     cleanWs()
+
+    agent {
+        docker { image 'amazoncorretto:17-al2023-jdk' }
+    }
 
     stage('checkout') {
         checkout scm
