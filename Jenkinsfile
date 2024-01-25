@@ -14,7 +14,7 @@ node {
 
     stage('build') {
         try {
-            sh "./gradlew verify"
+            sh "./gradlew test"
         } catch (err) {
             throw err
         } finally {
