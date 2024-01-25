@@ -9,9 +9,7 @@ node {
     }
 
     stage('check java') {
-        ansiColor('xterm') {
-            sh "java -version"
-        }
+        sh "java -version"
     }
 
     stage('build') {
