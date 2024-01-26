@@ -8,6 +8,10 @@ node {
         docker { image 'amazoncorretto:17-al2023-jdk' }
     }
 
+     stage('Install git') {
+        sh 'yum install git -y'
+     }
+
     stage('checkout') {
         checkout scm
     }
