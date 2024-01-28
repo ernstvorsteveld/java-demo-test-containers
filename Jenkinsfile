@@ -9,7 +9,7 @@ node {
     }
 
      stage('Install git') {
-        sh 'yum install git -y'
+        sh 'sudo yum install git -y'
      }
 
     stage('checkout') {
